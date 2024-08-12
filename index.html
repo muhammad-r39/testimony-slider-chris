@@ -3,82 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slider</title>
+    <title>Sliders</title>
+    <meta
+      name="description"
+      content="Swiper Sliders Exmaple, Video Slide, Infinte Scroll Slide, Testimonial Slide, Card Slide, Multi-Column Side, Responsive Slide"
+    />
+    <meta
+      name="keywords"
+      content="Swiper, responsive, multi-colum, video, infinite, scroll, testimonial, card, slider, slide, html, css, javascript"
+    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-    <style>
-      body {
-        background-color: #111214;
-      }
-
-      .container {
-        width: 900px;
-        margin: auto;
-        padding-top: 50px;
-        max-width: 100%;
-      }
-
-      .testimonials-container {
-        position: relative;
-        padding: 0 80px;
-      }
-
-      .testimonials {
-        width: 500px;
-        max-width: 100%;
-        margin: auto;
-        padding: 30px 0;
-      }
-
-      .testimonials-container .swiper-slide {
-        background-color: #111214;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        pointer-events: none;
-      }
-
-      .testimonials-container .swiper-slide.swiper-slide-active {
-        opacity: 1;
-        box-shadow: 0px 0px 10px rgb(0 0 0);
-      }
-
-      .testimonials-container .swipe-btn {
-        color: rgb(234, 118, 14) !important;
-        user-select: none;
-      }
-
-      @media screen and (max-width: 500px) {
-        .testimonials-container {
-          padding: 0 60px;
-        }
-        .testimonials-container .swipe-btn::after {
-          font-size: 30px !important;
-        }
-      }
-
-      @media screen and (max-width: 400px) {
-        .testimonials-container {
-          padding: 0 35px;
-        }
-        .testimonials .swipe-btn::after {
-          font-size: 24px !important;
-        }
-        .testimonials-container .swiper-button-prev,
-        .testimonials-container .swiper-rtl .swiper-button-next {
-          left: 0;
-        }
-        .testimonials-container .swiper-button-next,
-        .testimonials-container .swiper-rtl .swiper-button-prev {
-          right: 0;
-        }
-      }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.svg" />
   </head>
   <body>
-    <div class="container">
+    <div class="container heading">
+      <h2>Multi-Column Content Slider</h2>
+    </div>
+
+    <div class="container multi-colum">
+      <div class="program-slide-container">
+        <div class="swiper-program-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/8_33f706b1-73f0-4082-b7d8-7cd4a55e988b.webp?v=1705740147"
+                alt="POWERBUILDING"
+              />
+              <h3>POWERBUILDING</h3>
+              <p>
+                For those looking to gain muscle, increase strength, and crush
+                personal records
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/5_00cfbc04-5657-4006-afe9-9f4b72da5110.webp?v=1705740146"
+                alt="BODYWEIGHT"
+              />
+              <h3>BODYWEIGHT</h3>
+              <p>
+                Ryan's most challenging progressive bodyweight training that
+                makes you feel like you got your butt kicked
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/6_cada1b7a-f114-47d5-a128-20df423fca83.webp?v=1705740146"
+                alt="SWEAT"
+              />
+              <h3>SWEAT</h3>
+              <p>
+                A training Program filled with the best of Cardio and
+                High-Intensity Routines
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/2_49cc9e46-d587-418e-be50-6125960de967.webp?v=1705740146"
+                alt="BIG BOOTY BLUEPRINT"
+              />
+              <h3>BIG BOOTY BLUEPRINT</h3>
+              <p>Specific movements to change your glutes fast</p>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/1_82deeb68-1e20-4814-8f3d-c8551bafd875.webp?v=1705740146"
+                alt="OLYMPIC WEIGHTLIFTING"
+              />
+              <h3>OLYMPIC WEIGHTLIFTING</h3>
+              <p>
+                Increase your overall strength and Olympic lifts with 3 days per
+                week of high-volume training
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="program-slider-controllers swiper-slider-controllar-style2">
+          <div class="swipe-program-prev swipe-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="#ea760e"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              ></path>
+            </svg>
+          </div>
+          <div class="swiper-program-pagination swiper-style2-pagination"></div>
+          <div class="swipe-program-next swipe-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="#ea760e"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container heading">
+      <h2>Testimonial Card Slider</h2>
+    </div>
+
+    <div class="container testiimonial">
       <div class="testimonials-container">
         <div class="testimonials">
           <div class="swiper-wrapper"></div>
@@ -87,39 +126,131 @@
         <div class="swiper-button-prev swipe-prev swipe-btn"></div>
       </div>
     </div>
-    <script>
-      const imageLinks = [
-        "https://images.clickfunnels.com/73/c0bb80849141168ada4210be3ebf11/IMG_1960.jpg",
-        "https://images.clickfunnels.com/23/3ad895e4e24c4faaa0303b37bdaa8d/IMG_6586.jpg",
-        "https://images.clickfunnels.com/ee/2ce11f35fc4ab8898c56d177b3d445/IMG_6595.jpg",
-        "https://images.clickfunnels.com/07/f775419e294293a2da80e6058631d2/IMG_6598.jpg",
-        "https://images.clickfunnels.com/81/3459ce1a4641ff82b55f9283f539df/IMG_6583.jpg",
-      ];
 
-      const swiperWrapper = document.querySelector(
-        ".testimonials .swiper-wrapper"
-      );
-      imageLinks.forEach((link) => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide";
-        slide.innerHTML = `<img src="${link}" alt="Slide image" style="width: 100%;">`;
-        swiperWrapper.appendChild(slide);
-      });
+    <div class="container heading">
+      <h2>Video List Slider</h2>
+    </div>
 
-      const swiper = new Swiper(".testimonials", {
-        effect: "cards",
-        grabCursor: true,
-        speed: 500,
-        loop: true,
-        rotate: false,
-        mousewheel: {
-          invert: false,
-        },
-        navigation: {
-          nextEl: ".swipe-next",
-          prevEl: ".swipe-prev",
-        },
-      });
-    </script>
+    <div class="container video-slide">
+      <div class="video-slide-container">
+        <div class="swiper-video-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video
+                poster="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/UGC_Thumb_3.jpg?v=1707398870"
+                src="https://cdn.shopify.com/videos/c/o/v/5760db471adf4434a0f969e65572520b.mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                poster="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/UGC_Thumb_5.jpg?v=1707398426"
+                src="https://cdn.shopify.com/videos/c/o/v/2c5d4a1020ac4a3384a465da90ed8a66.mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                poster="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/UGC_Thumb_6.jpg?v=1707398480"
+                src="https://cdn.shopify.com/videos/c/o/v/3c666fa0032b4e109a8dfe22214868bc.mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                poster="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/UGC_Thumb_7.jpg?v=1707398559"
+                src="https://cdn.shopify.com/videos/c/o/v/fae8e0c51cc941899a99c9b3e6f8416f.mp4"
+              ></video>
+            </div>
+            <div class="swiper-slide">
+              <video
+                poster="https://cdn.shopify.com/s/files/1/0786/8016/2641/files/UGC_Thumb_1.jpg?v=1707398654"
+                src="https://cdn.shopify.com/videos/c/o/v/ffe41b031acf4a9ca2c55ec4a7b1dfb0.mp4"
+              ></video>
+            </div>
+          </div>
+        </div>
+        <div class="video-slider-controllers swiper-slider-controllar-style2">
+          <div class="swipe-video-prev swipe-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="#ea760e"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              ></path>
+            </svg>
+          </div>
+          <div class="swiper-video-pagination swiper-style2-pagination"></div>
+          <div class="swipe-video-next swipe-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="#ea760e"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container heading">
+      <h2>Infinite Scroll Slider</h2>
+    </div>
+
+    <div class="container scroll-slider">
+      <div class="scroll-slider-container">
+        <div class="scroll-slider-overlay"></div>
+        <div class="swiper-scroll-slider mobile-only">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://uploads.commoninja.com/image_slider/1722660895042_13-Adam-Fabijan.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://uploads.commoninja.com/image_slider/1722660814468_17-Edgar-Cardenas.webp"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://uploads.commoninja.com/image_slider/1722660807998_16-Dylan-Sikking.webp"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://uploads.commoninja.com/image_slider/1722660807998_16-Dylan-Sikking.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-space"></div>
+    <div class="container heading">
+      <h2>Like What You See?</h2>
+    </div>
+
+    <div class="container contact">
+      <div class="contact-content">
+        <a href="https://muhammadrussell.com/" target="_blank">About Me</a>
+        <a
+          href="https://www.upwork.com/freelancers/muhammadrussell"
+          target="_blank"
+          >Hire Me</a
+        >
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
