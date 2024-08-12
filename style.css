@@ -358,3 +358,23 @@ h2::after {
   background-color: #ea760e;
   color: #111214;
 }
+
+/*
+# Custom Scrollbar
+*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ea760e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
