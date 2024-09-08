@@ -19,17 +19,18 @@
         gap: 15px;
       }
       .tab-preview {
+        height: 450px;
         border-radius: 10px;
         overflow: hidden;
       }
       .tab-preview img {
-        max-width: 100%;
-        margin-bottom: -4px;
+        width: auto;
+        height: 100%;
       }
       .tab-preview iframe {
         background-color: #282828;
-        max-width: 100%;
-        margin-bottom: -4px;
+        width: 100%;
+        height: 100%;
       }
       .tab-selector {
         display: flex;
@@ -53,8 +54,8 @@
         display: none;
       }
       @media screen and (max-width: 992px) {
-        .tab-preview iframe {
-          height: 223px;
+        .tab-preview {
+          height: 220px;
         }
       }
     </style>
