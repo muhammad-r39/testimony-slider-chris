@@ -53,6 +53,17 @@
       .tab .content {
         display: none;
       }
+			.video-cover {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				cursor: pointer;
+			}
+			.video-cover img {
+				width: 100%;
+			}
       @media screen and (max-width: 992px) {
         .tab-preview {
           height: 220px;
@@ -67,81 +78,74 @@
   <body>
     <div class="container">
       <div class="tabs-container">
-        <div class="tab-preview"></div>
-        <div class="tab-selector">
-          <div class="tab active">
-            <div class="content">
-              <iframe
-                src="https://player.vimeo.com/video/544659097"
-                width="100%"
-                height="449"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen=""
-                data-ready="true"
-              ></iframe>
-            </div>
-            <div class="selector">
-              <img src="selector1.png" alt="selector" />
-            </div>
-          </div>
-          <div class="tab">
-            <div class="content">
-              <img src="placeholder2.png" alt="Content" />
-            </div>
-            <div class="selector">
-              <img src="selector2.png" alt="selector" />
-            </div>
-          </div>
-          <div class="tab">
-            <div class="content">
-              <img src="placeholder3.png" alt="Content" />
-            </div>
-            <div class="selector">
-              <img src="selector3.png" alt="selector" />
-            </div>
-          </div>
-          <div class="tab">
-            <div class="content">
-              <img src="placeholder1.png" alt="Content" />
-            </div>
-            <div class="selector">
-              <img src="selector1.png" alt="selector" />
-            </div>
-          </div>
-          <div class="tab">
-            <div class="content">
-              <img src="placeholder2.png" alt="Content" />
-            </div>
-            <div class="selector">
-              <img src="selector2.png" alt="selector" />
-            </div>
-          </div>
-          <div class="tab">
-            <div class="content">
-              <img src="placeholder3.png" alt="Content" />
-            </div>
-            <div class="selector">
-              <img src="selector3.png" alt="selector" />
-            </div>
-          </div>
-        </div>
-      </div>
+				<div class="tab-preview">
+				</div>
+				<div class="tab-selector">
+					<div class="tab active">
+						<div class="content">
+							<iframe src="https://player.vimeo.com/video/830142210?h=3a1a3fa04f&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="DUSTIN" width="640" height="360" data-ready="true"></iframe>
+							<div class="video-cover">
+								<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205535/dustin.jpg" alt="Play">
+							</div>
+						</div>
+						<div class="selector">
+							<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205436/selector1.png" alt="selector" />
+						</div>
+					</div>
+					<div class="tab">
+						<div class="content">
+							<iframe src="https://player.vimeo.com/video/358229207?h=bc147f172e&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Edson Barboza Best in the world" width="640" height="360" data-ready="true"></iframe>
+							<div class="video-cover">
+								<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205539/default.jpg" alt="Play">
+							</div>
+						</div>
+						<div class="selector">
+							<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205437/selector.png" alt="selector" />
+						</div>
+					</div>
+					<div class="tab">
+						<div class="content">
+							<iframe src="https://player.vimeo.com/video/348497280?h=22487ce954&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jr. Dos santos Testimonial" width="640" height="360" data-ready="true"></iframe>
+						</div>
+						<div class="selector">
+							<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205437/selector.png" alt="selector" />
+						</div>
+					</div>
+					<div class="tab">
+						<div class="content">
+							<iframe src="https://player.vimeo.com/video/830142210?h=3a1a3fa04f&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="DUSTIN" width="640" height="360" data-ready="true"></iframe>
+						</div>
+						<div class="selector">
+							<img src="https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1205437/selector.png" alt="selector" />
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
-    <script>
-      const preview = document.querySelector(".tab-preview");
-      const tabs = document.querySelectorAll(".tab .selector");
-      preview.innerHTML = document.querySelector(
-        ".tab.active .content"
-      ).innerHTML;
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.parentNode.classList.remove("active"));
-          tab.parentNode.classList.add("active");
-          const content = tab.previousElementSibling;
-          preview.innerHTML = content.innerHTML;
-        });
-      });
-    </script>
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<script>
+			const preview = document.querySelector(".tab-preview");
+			const tabs = document.querySelectorAll(".tab .selector");
+			preview.innerHTML = document.querySelector(".tab.active .content").innerHTML;
+			tabs.forEach((tab) => {
+				tab.addEventListener("click", () => {
+					tabs.forEach((t) => t.parentNode.classList.remove("active"));
+					tab.parentNode.classList.add("active");
+					const content = tab.previousElementSibling;
+					preview.innerHTML = content.innerHTML;
+				});
+			});
+			
+			document.addEventListener("click", function(e) {
+				const videoCover = e.target.closest(".tab-preview .video-cover");
+				if (videoCover) {
+					const video = new Vimeo.Player(videoCover.previousElementSibling);
+					video.play().catch(function(error) {
+						console.error('Error playing video:', error);
+					});
+					videoCover.style.display = "none";
+				}
+			});
+		</script>
   </body>
 </html>
